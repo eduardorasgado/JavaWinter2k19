@@ -41,6 +41,84 @@ public class Main {
         {
             System.out.println("They are not the same");
         }
+
+        // variables naming: variable names cannot be start with a number
+        // we can start them like these:
+        int variable = 123;
+        int _variable = 144;
+        int $variable = 7766;
+
+        // Constants
+        int VALOR = 100;
+        byte VALOR_MAXIMO = 6;
+
+        // lower camel case
+        int minValue = 5;
+        // upper cammel case = usually to write class names
+        // class DataType
+
+        // CASTING -----------------------
+        System.out.println("[WORKING WITH CASTINGS]");
+        // Implicit casting
+        byte myByte = 35;
+        short shorty = myByte;
+        System.out.println(shorty);
+
+        // explicit casting -> when data to be casted is a data type that supports more information than the
+        // value to be casted.
+        double d = 86.43;
+        // data casting may cause data lost -> trunctated data
+        int i = (int) d;
+        System.out.println(i);
+
+        int codigoASCI1 = 65;
+        char ASCI = (char) codigoASCI1;
+        System.out.println(ASCI);
+
+        short myShort = 3263;
+        byte myb = (byte) myShort;
+        System.out.println(myb);
+
+        // ARRAYS --------------------------
+        System.out.println("[ LESSON: ARRAYS ]");
+        // Arrays are objects
+        String[] myArray1 = {"a", "b", "c", "d"};
+        byte[] myBytes1 = new byte[15];
+
+        for(int j = 0; j < myArray1.length; ++j)
+        {
+            System.out.println(myArray1[j]);
+        }
+        System.out.println("byte array value addition.");
+        for (int j = 0; j < myBytes1.length;++j)
+        {
+            // adding values into byte array
+            myBytes1[j] = (byte)(j+1);
+        }
+
+        System.out.println("byte array values: ");
+        // foreach loop
+        // printing all values inside byte array
+        for(byte num : myBytes1)
+        {
+            System.out.print(num);
+            System.out.print(" ");
+        }
+        System.out.println(" ");
+
+        // declaring a integer array
+        // do not have to import a library to use new special word as c++ does.
+        int[] myIntegers = new int[10];
+        // arays in java start at zero as every language but matlab
+        myIntegers[0] = 100;
+        System.out.println(myIntegers[0]);
+
+        String[] galletas = {"Chokies", "Lors", "Emperador"};
+        for(String galleta : galletas)
+        {
+            // printing all the cockies
+            System.out.println(galleta);
+        }
     }
 
     private static int Addition(int a, int b)
