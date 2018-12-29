@@ -119,6 +119,58 @@ public class Main {
             // printing all the cockies
             System.out.println(galleta);
         }
+        // ARRAYS IN 2D -----------------
+        int[][] array2D = new int[2][4];
+        for(int j = 0;j < array2D.length;++j)
+        {
+            for(int k = 0; k < array2D[0].length;++k)
+            {
+                array2D[j][k] = ((j+1) * (k+1));
+            }
+        }
+
+        for(int[] j : array2D)
+        {
+            for(int k : j)
+            {
+                System.out.print(k);
+                System.out.print(" ");
+            }
+            System.out.println("");
+        }
+
+        // ARRAYS IN 3D
+        System.out.println("[ARRAYS IN 3D]");
+
+        char[][][] words = new char[2][2][2];
+
+        // addding values to array
+        for(int j = 0; j < words.length; ++j)
+        {
+            for(int k = 0; k < words[0].length; ++k)
+            {
+                for (int q = 0; q < words[0][0].length; ++q)
+                {
+                    words[j][k][q] = (char)(80 +((j+1) * (k+1) * (q+1)));
+                }
+            }
+        }
+
+        for(char[][] k : words)
+        {
+            for(char[]q : k)
+            {
+                System.out.print("[");
+                for(char j : q)
+                {
+                    System.out.print(j);
+                    System.out.print(" ");
+                }
+                System.out.print("]");
+            }
+            System.out.println("");
+        }
+
     }
 
     private static int Addition(int a, int b)
