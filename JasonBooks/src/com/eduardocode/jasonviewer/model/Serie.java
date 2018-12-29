@@ -15,6 +15,16 @@ public class Serie extends Film {
         this.seasonQuantity = seasonQuantity;
     }
 
+    @Override
+    public String toString() {
+        // overriding toString from Object inherited
+        return "Title: "+getTitle() +
+                "\nGenre: " + getGenre() +
+                "\nYear: " + getYear() +
+                "\nDirector: " + getDirector() +
+                "\nDuration: " + getDuration() + " minutes";
+    }
+
     // GETTERS AND SETTERS
     public int getId() {
         return id;

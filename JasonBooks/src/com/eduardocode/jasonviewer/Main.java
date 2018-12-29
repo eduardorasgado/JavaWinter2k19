@@ -37,7 +37,7 @@ public class Main {
     private static void takeDecision()
     {
         // Leer la respuesta del usuario
-        int opcion = 1;
+        int opcion = 2;
 
         switch (opcion) {
             case 0:
@@ -81,7 +81,8 @@ public class Main {
             cocoMovie.setTitle("Rambo");
             cocoMovie.setGenre("Action");
             System.out.println(cocoMovie.getTitle());
-            System.out.println(cocoMovie.toString());
+            // calling toString method overloaded from Object->film->Movie
+            System.out.println(cocoMovie);
 
             break;
         } while (exit == 1);
@@ -96,7 +97,8 @@ public class Main {
 
             Serie friends = new Serie("Friends", "Comedia", "Gabe Flores",
                     15000, 6);
-            System.out.println(friends.getTitle());
+            // using toSting overrided function
+            System.out.println(friends);
 
             break;
         } while (exit == 1);

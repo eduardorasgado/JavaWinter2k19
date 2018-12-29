@@ -17,14 +17,18 @@ public class Movie extends Film {
         this.setYear(year);
     }
 
-
-    // CUSTOM FUNCTIONS
-    public void showData()
+    // overriding methods from a super class
+    @Override
+    public String toString()
     {
-        //System.out.println("Title: "+ title);
-        //System.out.println("Genre: "+ genre);
-        //System.out.println("Year: "+ year);
+        // overriding toString from Object
+        return "Title: "+getTitle() +
+                "\nGenre: " + getGenre() +
+                "\nYear: " + getYear() +
+                "\nDirector: " + getDirector() +
+                "\nDuration: " + getDuration() + " minutes";
     }
+
 
     //  SETTERS AND GETTERS
     public int getId() {

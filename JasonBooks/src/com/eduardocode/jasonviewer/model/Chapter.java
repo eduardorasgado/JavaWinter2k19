@@ -11,6 +11,16 @@ public class Chapter extends Movie {
         this.seasonNumber = seasonNumber;
     }
 
+    @Override
+    public String toString()
+    {
+        return "Title: "+getTitle() +
+                "\nGenre: " + getGenre() +
+                "\nYear: " + getYear() +
+                "\nDirector: " + getDirector() +
+                "\nDuration: " + getDuration() + " minutes";
+    }
+
     // GETTERS AND SETTERS
     public int getId() {
         return id;
