@@ -22,8 +22,11 @@ public class Chapter extends Movie {
     }
 
     // GETTERS AND SETTERS
+    @Override
     public int getId() {
-        return id;
+        // iverloading the father id and returning the
+        // actual chapter object id
+        return this.id;
     }
 
     public int getSeasonNumber() {
