@@ -171,6 +171,16 @@ public class Main {
             System.out.println("");
         }
 
+        // declaring and defining multidimensinal arrays
+        int[][] matrix = {
+                {14, 63, 46, 45, 67, 56},
+                {56, 23, 11, 22, 58, 66},
+                {123, 532, 534, 765, 74}
+        };
+
+        System.out.println(matrix.length);
+        System.out.println(matrix[0].length);
+
     }
 
     private static int Addition(int a, int b)
