@@ -1,23 +1,18 @@
 package com.eduardocode.jasonviewer.model;
 
-public class Serie {
+public class Serie extends Film {
     // attributes
     private int id;
-    private String title;
-    private String genre;
-    private String director;
-    private int duration;
-    private short year;
-    private boolean viewed;
-    private int timeViewed;
-    private int sessionQuantity;
+    private int seasonQuantity;
     // chapter array
+    private Chapter[] chapters;
 
-
-    public Serie(String title, String genre, int duration) {
-        this.title = title;
-        this.genre = genre;
-        this.duration = duration;
+    public Serie(String title, String genre, String director,
+                 int duration, int seasonQuantity) {
+        // father class
+        super(title, genre, director, duration);
+        // this class
+        this.seasonQuantity = seasonQuantity;
     }
 
     // GETTERS AND SETTERS
@@ -25,71 +20,19 @@ public class Serie {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public int getSeasonQuantity() {
+        return seasonQuantity;
     }
 
-    public String getTitle() {
-        return title;
+    public void setSeasonQuantity(int seasonQuantity) {
+        this.seasonQuantity = seasonQuantity;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public Chapter[] getChapters() {
+        return chapters;
     }
 
-    public String getGenre() {
-        return genre;
-    }
-
-    public void setGenre(String genre) {
-        this.genre = genre;
-    }
-
-    public String getDirector() {
-        return director;
-    }
-
-    public void setDirector(String director) {
-        this.director = director;
-    }
-
-    public int getDuration() {
-        return duration;
-    }
-
-    public void setDuration(int duration) {
-        this.duration = duration;
-    }
-
-    public short getYear() {
-        return year;
-    }
-
-    public void setYear(short year) {
-        this.year = year;
-    }
-
-    public boolean isViewed() {
-        return viewed;
-    }
-
-    public void setViewed(boolean viewed) {
-        this.viewed = viewed;
-    }
-
-    public int getTimeViewed() {
-        return timeViewed;
-    }
-
-    public void setTimeViewed(int timeViewed) {
-        this.timeViewed = timeViewed;
-    }
-
-    public int getSessionQuantity() {
-        return sessionQuantity;
-    }
-
-    public void setSessionQuantity(int sessionQuantity) {
-        this.sessionQuantity = sessionQuantity;
+    public void setChapters(Chapter[] chapters) {
+        this.chapters = chapters;
     }
 }

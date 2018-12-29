@@ -37,7 +37,7 @@ public class Main {
     private static void takeDecision()
     {
         // Leer la respuesta del usuario
-        int opcion = 2;
+        int opcion = 1;
 
         switch (opcion) {
             case 0:
@@ -75,11 +75,13 @@ public class Main {
         do {
             System.out.println("::MOVIES::");
             // Creating a movie instance
-            Movie cocoMovie = new Movie("Coco", "Animation", (short) 2017);
-            cocoMovie.showData();
+            Movie cocoMovie = new Movie("Coco", "Animation",
+                    "Lee Unkrich", 134, (short)2017);
+            System.out.println(cocoMovie.getTitle());
             cocoMovie.setTitle("Rambo");
             cocoMovie.setGenre("Action");
-            cocoMovie.showData();
+            System.out.println(cocoMovie.getTitle());
+            System.out.println(cocoMovie.toString());
 
             break;
         } while (exit == 1);
@@ -92,7 +94,8 @@ public class Main {
         do {
             System.out.println("::SERIES::");
 
-            Serie friends = new Serie("Friends", "Comedia", 15000);
+            Serie friends = new Serie("Friends", "Comedia", "Gabe Flores",
+                    15000, 6);
             System.out.println(friends.getTitle());
 
             break;
