@@ -4,6 +4,7 @@ public class Serie {
     // attributes
     int id;
     String title;
+    String genre;
     String director;
     short year;
     boolean viewed;

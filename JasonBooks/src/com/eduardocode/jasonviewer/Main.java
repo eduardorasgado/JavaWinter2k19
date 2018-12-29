@@ -73,6 +73,10 @@ public class Main {
         int exit = 1;
         do {
             System.out.println("::MOVIES::");
+            // Creating a movie instance
+            Movie cocoMovie = new Movie("Coco", "Animation", (short) 2017);
+            System.out.println(cocoMovie.getTitle());
+
             break;
         } while (exit == 1);
     }

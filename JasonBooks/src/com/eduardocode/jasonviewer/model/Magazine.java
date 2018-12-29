@@ -7,6 +7,7 @@ public class Magazine {
     int id;
     String title;
     Date editionDate;
+    String genre;
     String editorial;
     String[] authors;
 }
