@@ -28,6 +28,14 @@ public class Movie {
         this.year = year;
     }
 
+    // CUSTOM FUCNTIONS
+    public void showData()
+    {
+        System.out.println("Title: "+ title);
+        System.out.println("Genre: "+ genre);
+        System.out.println("Year: "+ year);
+    }
+
     //  SETTERS AND GETTERS
     public int getId() {
         return id;
@@ -93,12 +101,5 @@ public class Movie {
         this.timeViewed = timeViewed;
     }
 
-    // CUSTOM FUCNTIONS
-    public void showData()
-    {
-        System.out.println("Title: "+ title);
-        System.out.println("Genre: "+ genre);
-        System.out.println("Year: "+ year);
-    }
 }
 

@@ -1,6 +1,7 @@
 package com.eduardocode.jasonviewer;
 
 import com.eduardocode.jasonviewer.model.Movie;
+import com.eduardocode.jasonviewer.model.Serie;
 
 import java.util.Date;
 
@@ -36,7 +37,7 @@ public class Main {
     private static void takeDecision()
     {
         // Leer la respuesta del usuario
-        int opcion = 1;
+        int opcion = 2;
 
         switch (opcion) {
             case 0:
@@ -75,7 +76,9 @@ public class Main {
             System.out.println("::MOVIES::");
             // Creating a movie instance
             Movie cocoMovie = new Movie("Coco", "Animation", (short) 2017);
-            //System.out.println(cocoMovie.getTitle());
+            cocoMovie.showData();
+            cocoMovie.setTitle("Rambo");
+            cocoMovie.setGenre("Action");
             cocoMovie.showData();
 
             break;
@@ -88,6 +91,10 @@ public class Main {
         int exit = 1;
         do {
             System.out.println("::SERIES::");
+
+            Serie friends = new Serie("Friends", "Comedia", 15000);
+            System.out.println(friends.getTitle());
+
             break;
         } while (exit == 1);
     }
