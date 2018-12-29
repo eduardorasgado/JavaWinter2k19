@@ -75,7 +75,8 @@ public class Main {
             System.out.println("::MOVIES::");
             // Creating a movie instance
             Movie cocoMovie = new Movie("Coco", "Animation", (short) 2017);
-            System.out.println(cocoMovie.getTitle());
+            //System.out.println(cocoMovie.getTitle());
+            cocoMovie.showData();
 
             break;
         } while (exit == 1);

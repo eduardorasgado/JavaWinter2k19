@@ -4,14 +4,14 @@ public class Movie {
     // declaring attributes
     // usually these data is private and they need
     // setters and getters to be accesed
-    int id;
-    String title;
-    String genre;
-    String director;
-    int duration;
-    short year;
-    boolean viewed;
-    int timeViewed;
+    private int id;
+    private String title;
+    private String genre;
+    private String director;
+    private int duration;
+    private short year;
+    private boolean viewed;
+    private int timeViewed;
 
     public Movie(String title, String genre, String director, int duration, short year) {
         this.title = title;
@@ -28,6 +28,7 @@ public class Movie {
         this.year = year;
     }
 
+    //  SETTERS AND GETTERS
     public int getId() {
         return id;
     }
@@ -90,6 +91,14 @@ public class Movie {
 
     public void setTimeViewed(int timeViewed) {
         this.timeViewed = timeViewed;
+    }
+
+    // CUSTOM FUCNTIONS
+    public void showData()
+    {
+        System.out.println("Title: "+ title);
+        System.out.println("Genre: "+ genre);
+        System.out.println("Year: "+ year);
     }
 }
 
