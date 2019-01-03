@@ -1,6 +1,10 @@
 package com.eduardocode.jasonviewer.model;
 
-public class Movie extends Film {
+import java.util.Date;
+
+// Java classes can have as many interfaces as you need
+// but it is not the case for class inheritance
+public class Movie extends Film implements IPlayable {
     // Movie is a subclass
 
     // declaring attributes
@@ -29,6 +33,21 @@ public class Movie extends Film {
                 "\nDuration: " + getDuration() + " minutes";
     }
 
+    // overriding IPlayable methods
+    @Override
+    public Date startToSee(Date dateI)
+    {
+        // just a checkin
+        return dateI;
+    }
+
+    @Override
+    public void stoptToSee(Date dateI, Date dateF) {
+        long result = (dateF.getTime() > dateI.getTime())
+                ? (dateF.getTime() - dateI.getTime() / 1000) : 0;
+
+        this.setTimeViewed((int)result);
+    }
 
     //  SETTERS AND GETTERS
     public int getId() {
