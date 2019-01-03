@@ -1,6 +1,7 @@
 package com.eduardocode.jasonviewer;
 
 import com.eduardocode.jasonviewer.model.Book;
+import com.eduardocode.jasonviewer.model.Magazine;
 import com.eduardocode.jasonviewer.model.Movie;
 import com.eduardocode.jasonviewer.model.Serie;
 
@@ -38,7 +39,7 @@ public class Main {
     private static void takeDecision()
     {
         // Leer la respuesta del usuario
-        int opcion = 3;
+        int opcion = 4;
 
         switch (opcion) {
             case 0:
@@ -126,6 +127,11 @@ public class Main {
         int exit = 1;
         do {
             System.out.println("::MAGAZINES::");
+            Date date = new Date();
+            Magazine mag = new Magazine("Muy Interesante", date,
+                    "Science", "Whaterver", (short) 789);
+            System.out.println(mag);
+
             break;
         } while (exit == 1);
     }

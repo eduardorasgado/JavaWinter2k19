@@ -18,7 +18,7 @@ public class Book extends Readable {
     @Override
     public String toString()
     {
-        return "Title: "+getTitle()+
+        return "Book Title: "+getTitle()+
                 "\ngenre: "+getGenre();
     }
 
