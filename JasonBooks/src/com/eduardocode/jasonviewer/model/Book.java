@@ -14,6 +14,13 @@ public class Book extends Readable {
         super(title,editionDate,genre,editorial);
         this.isbn = isbn;
     }
+    // to string
+    @Override
+    public String toString()
+    {
+        return "Title: "+getTitle()+
+                "\ngenre: "+getGenre();
+    }
 
     // GETTERS AND SETTERS
     public String getIsbn() {

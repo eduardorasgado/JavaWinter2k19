@@ -10,7 +10,7 @@ public class Readable {
     private String editorial;
     private String[] authors;
 
-    public Readable(String title, Date editionDate, String genre, String editorial) {
+    protected Readable(String title, Date editionDate, String genre, String editorial) {
         this.title = title;
         this.editionDate = editionDate;
         this.genre = genre;
